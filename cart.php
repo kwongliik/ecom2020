@@ -152,7 +152,7 @@ include("includes/db.php");
                                     <td><?php echo $product_title; ?><br>
                                         <img src="admin_area/product_images/<?php echo $product_image; ?>" width="60" height="60">
                                     </td>
-                                    <td><input type="text" size="4" name="quantity" value="<?php echo $_SESSION['pro_qty']; ?>" data-product_id123="<?php echo $pro_id; ?>" class="quantity"></td>                                    
+                                    <td><input type="text" size="4" name="quantity" value="<?php echo $_SESSION['pro_qty']; ?>" data-product_id="<?php echo $pro_id; ?>" class="quantity"></td>                                    
                                     <td><?php echo "$" . $single_price; ?></td>
                                     <td><?php echo "$" . $subtotal; ?></td>
                                 </tr>
@@ -229,11 +229,11 @@ $(document).ready(function(data){
 
 $(document).on('keyup', '.quantity', function(){
 
-var id = $(this).data("product_id123");
+var id = $(this).data("product_id");
 
 var quantity = $(this).val();
 
-    if(quantity  != ''){
+    if(quantity != ''){
 
         $.ajax({
 

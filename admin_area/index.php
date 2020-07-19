@@ -16,35 +16,33 @@ if(!isset($_SESSION['user_email'])){
         <title>This is admin panel</title>
         <link rel="stylesheet" href="styles/style.css" media="all"> 
         <script src="../js/jquery.min.js"></script>      
-        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>  
-        <script src="../js/print.js"></script>
-        <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">                 
+        <script src="../js/functions.js"></script>
         <style>
-					.button {
-                        background-color: #4CAF50; /* Green */
-                        border: none;
-                        color: white;
-                        padding: 4px 24px;
-                        text-align: center;
-                        text-decoration: none;
-                        display: inline-block;
-                        font-size: 14px;
-                        margin: 4px 2px;
-                        transition-duration: 0.4s;
-                        cursor: pointer;
-                        border-radius: 8px;
-					}
+            .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 4px 24px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 14px;
+                margin: 4px 2px;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                border-radius: 8px;
+            }
 
-					.button1 {	
-					background-color: white; 
-					color: black; 
-					border: 2px solid #4CAF50;
-					}
+            .button1 {	
+            background-color: white; 
+            color: black; 
+            border: 2px solid #4CAF50;
+            }
 
-					.button1:hover {
-					background-color: #4CAF50;
-					color: white;
-					}
+            .button1:hover {
+            background-color: #4CAF50;
+            color: white;
+            }
         </style>    
     </head>
     <body>
@@ -61,7 +59,7 @@ if(!isset($_SESSION['user_email'])){
                     <a href="index.php?view_customers">View customers</a>
                     <a href="index.php?view_orders">View orders</a>
                     <a href="index.php?view_payments">View payments</a>
-                    <a href="index.php?import_products">Import products</a>
+                    <a href="import_products.php">Import products</a>
                     <a href="logout.php">Admin logout</a>    
             </div>
             <div id="left">
@@ -140,11 +138,11 @@ if(!isset($_SESSION['user_email'])){
 
                 }
 
-                if(isset($_GET['import_products'])){
+                /*if(isset($_GET['import_products'])){
 
                     include("import_products.php");
 
-                }
+                }*/
 
                 ?>
             </div>

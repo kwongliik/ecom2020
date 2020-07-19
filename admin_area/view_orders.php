@@ -8,19 +8,20 @@ if(!isset($_SESSION['user_email'])){
 } else {
 
 ?>
-<div class="" style="width:900px;" align="center">
+
+<div style="width:900px;" align="center">
     <h3>Order Information</h3><br />  
     
-    <input type="text" name="from_date" id="from_date" class="" placeholder="From Date" />  
+    FROM DATE: <input type="date" name="from_date" id="from_date" placeholder="From Date" />  
     
-    <input type="text" name="to_date" id="to_date" class="" placeholder="To Date" />  
+    TO DATE: <input type="date" name="to_date" id="to_date" placeholder="To Date" />  
     
     <input type="button" name="filter" id="filter" value="Filter" class="button button1" />  
     
     <br />
 </div> 
 
-<table width="795" align="center" bgcolor="pink" id="printTable">
+	<table width="795" align="center" bgcolor="pink" id="printTable">
     <tr align="center">
         <td colspan="6"><h2>View orders here</h2></td>
     </tr>        
@@ -80,22 +81,22 @@ if(!isset($_SESSION['user_email'])){
         <td><a href="delete_order.php?delete_order=<?php echo $order_id; ?>">Delete</a></td>
     </tr>
     <?php } ?>
-</table>
-
+	</table>
 <br />
-
-<button class="button button1">Print</button>
+<div align="center">
+	<button class="button button1">Print</button>
+</div>
 <?php } ?>
 
 <script>  
       $(document).ready(function(){  
-           $.datepicker.setDefaults({  
+           /*$.datepicker.setDefaults({  
                 dateFormat: 'yy-mm-dd'   
            });  
            $(function(){  
                 $("#from_date").datepicker();  
                 $("#to_date").datepicker();  
-           });  
+           });*/  
            $('#filter').click(function(){  
                 var from_date = $('#from_date').val();  
                 var to_date = $('#to_date').val();  

@@ -1,4 +1,4 @@
-<script src="../js/print.js"></script>
+<script src="../js/functions.js"></script>
 <?php  
  //search_orders.php
  include 'includes/db.php';
@@ -66,7 +66,7 @@
 					</tr>';  
 	}
 	$output .= '</table>';
-	$output .= '<br><button class="button button1">Print</button>';  
+	$output .= '<br><div align="center"><button class="button button1">Print</button></div>';  
 	echo $output; 
  }
  ?>

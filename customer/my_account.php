@@ -10,6 +10,34 @@ include("functions/functions.php");
         <title>My Online Shop</title>
         <link rel="stylesheet" href="styles/style.css" media="all">
         <script src="../js/jquery.min.js"></script>
+        <script src="../js/functions.js"></script>
+        <style>
+            .button {
+                background-color: #4CAF50; /* Green */
+                border: none;
+                color: white;
+                padding: 4px 24px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 14px;
+                margin: 4px 2px;
+                transition-duration: 0.4s;
+                cursor: pointer;
+                border-radius: 8px;
+            }
+
+            .button1 {	
+            background-color: white; 
+            color: black; 
+            border: 2px solid #4CAF50;
+            }
+
+            .button1:hover {
+            background-color: #4CAF50;
+            color: white;
+            }
+        </style>
     </head>
     <body>
         <!-- Main container starts here -->
@@ -158,7 +186,7 @@ include("functions/functions.php");
             <!-- Content wrapper ends -->
 
             <div id="footer">
-                <h2 style="text-align: center; padding-top:30px;">&copy; 2019 by camhu.ddns.net</h2>
+                <h2 style="text-align: center; padding-top:30px;">&copy; 2020 by pyhu.ddns.net</h2>
             
             </div>
         </div>
@@ -167,15 +195,6 @@ include("functions/functions.php");
 </html>
 
 <script>
-function printData()
-{
-   var divToPrint=document.getElementById("printTable");
-   newWin= window.open("");
-   newWin.document.write(divToPrint.outerHTML);
-   newWin.print();
-   newWin.close();
-}
-
 $('button').on('click',function(){
 printData();
 });

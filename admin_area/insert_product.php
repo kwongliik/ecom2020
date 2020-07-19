@@ -20,10 +20,11 @@ include("includes/db.php");
         <title>Inserting Product</title>
         <script src="//tinymce.cachefly.net/4.1/tinymce.min.js" referrerpolicy="origin"></script>
         <script>tinymce.init({selector:'textarea'});</script>
+        <script src="../js/functions.js"></script>
     </head>
     <body style="background-color:skyblue">
         <form action="insert_product.php" method="post" enctype="multipart/form-data">
-            <table style="float:center" width="795" border="2" bgcolor="skyblue">
+            <table style="float:center" width="795" border="2" bgcolor="pink">
                 <tr align="center"> 
                     <td colspan="7"><h2>Insert New Product Here</h2></td>
                 </tr>
@@ -86,7 +87,7 @@ include("includes/db.php");
 
                 <tr>
                     <td align="right"><b>Product Price:</b></td>
-                    <td><input type="text" name="product_price" required></td>
+                    <td><input type="text" name="product_price" id="product_price123" required></td>
                 </tr>
 
                 <tr>
@@ -100,13 +101,14 @@ include("includes/db.php");
                 </tr>
 
                 <tr align="center">
-                    <td colspan="7"><input type="submit" name="insert_post" value="Insert Product Now"></td>
+                    <td colspan="7"><input type="submit" name="insert_post" value="Insert Product Now" onclick="return validate_product_price()"></td>
                 </tr>
 
             </table>
-        </form>
+        </form>        
     </body>
 </html>
+
 <?php
 
 if(isset($_POST['insert_post'])){

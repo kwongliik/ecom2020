@@ -100,7 +100,7 @@ include("functions/functions.php");
             <!-- Content wrapper ends -->
 
             <div id="footer">
-                <h2 style="text-align: center; padding-top:30px;">&copy; 2019 by camhu.ddns.net</h2>
+                <h2 style="text-align: center; padding-top:30px;">&copy; 2020 by pyhu.ddns.net</h2>
             
             </div>
         </div>

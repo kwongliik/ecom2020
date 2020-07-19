@@ -46,6 +46,7 @@ if(isset($_GET['edit_pro'])){
         <title>Update Product</title>
         <script src="//tinymce.cachefly.net/4.1/tinymce.min.js" referrerpolicy="origin"></script>
         <script>tinymce.init({selector:'textarea'});</script>
+        <script src="../js/functions.js"></script>
     </head>
     <body bgcolor="skyblue">
         <form action="" method="post" enctype="multipart/form-data">
@@ -112,7 +113,7 @@ if(isset($_GET['edit_pro'])){
 
                 <tr>
                     <td align="right"><b>Product Price:</b></td>
-                    <td><input type="text" name="product_price" value="<?php echo $pro_price; ?>"></td>
+                    <td><input type="text" name="product_price" id="product_price123" value="<?php echo $pro_price; ?>"></td>
                 </tr>
 
                 <tr>
@@ -126,7 +127,7 @@ if(isset($_GET['edit_pro'])){
                 </tr>
 
                 <tr align="center">
-                    <td colspan="7"><input type="submit" name="update_product" value="Update Product"></td>
+                    <td colspan="7"><input type="submit" name="update_product" value="Update Product" onclick="return validate_product_price()"></td>
                 </tr>
 
             </table>
