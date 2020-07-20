@@ -4,8 +4,7 @@
     FROM DATE: <input type="date" name="from_date" id="from_date" placeholder="yyyy-mm-dd" />  
     
     TO DATE: <input type="date" name="to_date" id="to_date" placeholder="yyyy-mm-dd" />  
-    
-	<!--input type="hidden" name="customer_id" id="customer_id" value="<?php echo $customer_id; ?>"-->
+    	
     <input type="button" name="filter" id="filter" value="Filter" class="button button1" />  
     
     <br />
@@ -69,6 +68,10 @@
 
 <button class="button button1">Print</button>
 
+<div id="test">
+
+</div>
+
 <script>  
       $(document).ready(function(){  
            /*$.datepicker.setDefaults({  
@@ -81,13 +84,13 @@
            $('#filter').click(function(){  
                 var from_date = $('#from_date').val();  
 				var to_date = $('#to_date').val();
-				//var customer_id = $('#customer_id').val();  
-                if(from_date != '' && to_date != '')  
+				var customer_id = <?php echo $customer_id; ?>;  
+                if(from_date != '' && to_date != '' && customer_id != '')  
                 {  
                      $.ajax({  
                           url:"search_my_orders.php",  
                           method:"POST",  
-                          data:{from_date:from_date, to_date:to_date},  
+                          data:{from_date:from_date, to_date:to_date, customer_id:customer_id},  
                           success:function(data)  
                           {  
                                $('#left').html(data);  

@@ -70,7 +70,7 @@ $(document).ready(function() {
         	    //$("#response").addClass("error");
         	    //$("#response").addClass("display-block");
             //$("#response").html("Invalid File. Upload : <b>" + fileType + "</b> Files.");
-            alert("Please select a CSV file or invalid file type!");
+            alert("Please select a CSV file!");
 						return false;
         }
         return true;

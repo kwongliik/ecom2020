@@ -1,13 +1,11 @@
-<script src="../js/functions.js"></script>
 <?php  
  //search_my_orders.php
  include 'includes/db.php';
- if(isset($_POST["from_date"], $_POST["to_date"]))  
+ if(isset($_POST["from_date"], $_POST["to_date"], $_POST["customer_id"]))  
  {    
-	  //$customer_id = $_POST['customer_id'];  
-      $output = '';  
+	  $output = '';  
       $query = "SELECT * FROM orders  
-           			WHERE order_date BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."'";  
+           			WHERE customer_id=" . $_POST['customer_id'] . " AND order_date BETWEEN '".$_POST["from_date"]."' AND '".$_POST["to_date"]."'";  
 	  
 		$result = mysqli_query($con, $query);
 		$output .= '<table width="770" align="center" bgcolor="pink" id="printTable">
